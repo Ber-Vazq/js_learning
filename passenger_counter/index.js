@@ -1,12 +1,16 @@
-//document.getElementById("count-el").innerText = 5
+//document.getElementById("count-el").innerText = 5 //speaking directly to the document this script is attached too, to get an element by its ID and set the value to 5
 //let firstBatch = 5
 //let secondBatch = 7
 //let count = firstBatch + secondBatch //let count be 0
 //console.log(count)
 
-let humanAge = 23
-let humanDogRatio = 7
+let count = 0
 
-let myDogAge = humanAge * humanDogRatio
+// console.log(count)
 
-console.log(myDogAge)
+function increment(){
+    count = count + 1
+    console.log("button was clicked")
+}
+
+console.log(count)
