@@ -10,7 +10,12 @@ let count = 0
 
 function increment(){
     count = count + 1
+    document.getElementById("count").innerText = count 
     console.log("button was clicked")
 }
 
-console.log(count)
+function decrement(){
+    count = count - 1
+    document.getElementById("count").innertext = count
+    console.log("one person subtracted")
+}
