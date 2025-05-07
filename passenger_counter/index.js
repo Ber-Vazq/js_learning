@@ -11,11 +11,11 @@ let count = 0
 function increment(){
     count += 1;
     document.getElementById("count").innerText = count;
-    console.log("button was clicked")
+    console.log("button clicked")
 }
 
 function decrement(){
     count -= 1;
     document.getElementById("count").innerText = count;
-    console.log("one person subtracted")
+    console.log("button clicked")
 }
