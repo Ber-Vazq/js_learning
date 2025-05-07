@@ -9,13 +9,13 @@ let count = 0
 // console.log(count)
 
 function increment(){
-    count = count + 1
-    document.getElementById("count").innerText = count 
+    count += 1;
+    document.getElementById("count").innerText = count;
     console.log("button was clicked")
 }
 
 function decrement(){
-    count = count - 1
-    document.getElementById("count").innertext = count
+    count -= 1;
+    document.getElementById("count").innerText = count;
     console.log("one person subtracted")
 }
