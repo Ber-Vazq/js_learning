@@ -1,0 +1,23 @@
+body{
+    box-sizing: border-box;
+    background-color: white; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#console{
+    margin-top: 38vh;
+    border: solid 2px;
+    border-radius: 20px;
+    padding: 10px;
+    max-width: 230px;
+    background-color: beige;
+}
+
+button{
+    height: 50px;
+    width: 200px;
+    color: black;
+    border-radius: 50px;
+    font-size: 20px;
+}
