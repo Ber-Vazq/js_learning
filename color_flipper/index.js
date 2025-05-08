@@ -2,11 +2,8 @@
 //requires three colors, next to eachother on color wheel/rgb values
 
 function colorChange() {
-    let red = Math.floor(Math.random() * 256);
-    let green = Math.floor(Math.random() * 256);
-    let blue = Math.floor(Math.random() * 256);
-    let color = "rgb(" + red + "," + green + "," + blue + ")";
-    document.getElementById("body").style.backgroundColor = color;
-    document.getElementById("hexcode").innerText = color;
-    console.log("color has been flipped " + color);
+    var randomColor = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+    document.getElementById("body").style.backgroundColor = randomColor;
+    document.getElementById("hexcode").innerText = randomColor;
+    console.log("color has been flipped " + randomColor);
 }
