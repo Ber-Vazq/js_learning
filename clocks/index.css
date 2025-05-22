@@ -1,0 +1,161 @@
+.watch-container{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #2a2a2a;
+    border-radius: 20px;
+    box-shadow:  0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.analog-face{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #fff;
+    top: 50px;
+    left: 50px;
+    border: 4px solid #333;
+}
+
+.hand {
+    position: absolute;
+    background: #333;
+    transform-origin: bottom center;
+    left: 50%;
+}
+
+.hour {
+    width: 4px;
+    height: 60px;
+    top: 90px;
+}
+
+.minute{
+    width: 4px;
+    height: 90px;
+    top: 60px;
+}
+
+.second{
+    width: 2px;
+    height: 100px;
+    background: red;
+    top: 50px;
+}
+
+.center{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    top: 145px;
+    left: 147px;
+}
+
+/* LCD */
+
+.lcd-display{
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #567c46;
+    padding: 15px;
+    border-radius: 8px;
+    font-family: 'LCD', Arial, sans-serif;
+}
+
+.digit-container{
+    display: flex;
+    gap: 8px;
+}
+
+.digit{
+    width: 40px;
+    height: 70px;
+    position: relative;
+}
+
+.segment{
+    position: absolute;
+    background: rgba(0, 0, 0, 0.3);
+      transition: 
+    background 0.15s ease-out,
+    box-shadow 0.15s ease-out;
+}
+
+.segment.active{
+  background: #3fff48; /* Bright LCD green */
+  box-shadow: 0 0 8px #3fff4866; /* Glow effect */
+}
+
+.segment.a {
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+  top: 5%;
+  left: 10%;
+  right: 10%;
+  height: 12%;
+}
+
+.segment.g {
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+  top: 48%;
+  left: 10%;
+  right: 10%;
+  height: 12%;
+}
+
+.segment.d {
+  clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
+  height: 12%;
+}
+
+/* Vertical Segments */
+.segment.b {
+  clip-path: polygon(0 10%, 50% 0, 100% 10%, 50% 100%);
+  top: 10%;
+  right: 5%;
+  width: 12%;
+  height: 35%;
+}
+
+.segment.c {
+  clip-path: polygon(0 10%, 50% 0, 100% 10%, 50% 100%);
+  bottom: 10%;
+  right: 5%;
+  width: 12%;
+  height: 35%;
+}
+
+.segment.f {
+  clip-path: polygon(100% 10%, 50% 0, 0% 30%, 50% 100%);
+  top: 10%;
+  left: 5%;
+  width: 12%;
+  height: 35%;
+}
+
+.segment.e {
+  clip-path: polygon(100% 10%, 50% 0, 0% 30%, 50% 100%);
+  bottom: 10%;
+  left: 5%;
+  width: 12%;
+  height: 35%;
+}
+.segment.a { top: 3% !important; }
+.segment.g { top: 46% !important; }
+.segment.d { bottom: 3% !important; }
+
+/* Better vertical segment angles */
+.segment.b, .segment.c {
+  clip-path: polygon(0 8%, 50% 0, 100% 8%, 50% 100%);
+}
+
+.segment.e, .segment.f {
+  clip-path: polygon(100% 8%, 50% 0, 0% 8%, 50% 100%);
+}
